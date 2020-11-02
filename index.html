@@ -338,7 +338,7 @@
       Email.send({ 
         SecureToken : "6050d42b-a4f0-4c89-ac78-42a66b24257a",
         To: 'sergiobaha1999@gmail.com', 
-        From: "sergiobaha1999@gmail.com", 
+        From: $("#email").val(), 
         Subject: "Contacto por medio de pagina web",
         Body: "Nombre:" + $("#name").val() + "Correo:" + $("#email").val() + "Asunto:" + $("#subject").val() + "Mensaje:" + $("textarea[name=message]").val(),
       }) 
@@ -348,8 +348,6 @@
           $("#email").val("")
           $("#subject").val("")
           $("textarea[name=message]").val("")
-
-
         }); 
     } 
   </script>
