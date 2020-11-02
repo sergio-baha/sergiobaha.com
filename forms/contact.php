@@ -1,6 +1,6 @@
 <?php
  
-  $receiving_email_address = 'sergiodbaf2@hotmail.com';
+  $receiving_email_address = 'sergiobaha1999@gmail.com';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
@@ -25,7 +25,12 @@
     'port' => '587'
   );
   */
-
+  $contact->smtp = array(
+    'host' => 'smtp-relay.gmail.com',
+    'username' => 'sergiobaha1999@gmail.com',
+    'password' => 'Ahriestarota123',
+    'port' => '587'
+  );
   $contact->add_message( $_POST['name'], 'From');
   $contact->add_message( $_POST['email'], 'Email');
   $contact->add_message( $_POST['message'], 'Message', 10);
