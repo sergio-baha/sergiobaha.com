@@ -344,6 +344,12 @@
       }) 
         .then(function (message) { 
           alert("Enviado correctamente") 
+          $("#name").val("")
+          $("#email").val("")
+          $("#subject").val("")
+          $("textarea[name=message]").val("")
+
+
         }); 
     } 
   </script>
