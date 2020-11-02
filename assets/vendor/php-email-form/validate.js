@@ -126,9 +126,12 @@
   function php_email_form_submit(this_form, action, data) {
     $.ajax({
       type: "POST",
+      crossDomain: true,
       url: action,
       data: data,
-      timeout: 40000
+      timeout: 40000,
+      dataType: "jsonp"
+    
     }).done( function(msg){
       if (msg.trim() == 'OK') {
         this_form.find('.loading').slideUp();
