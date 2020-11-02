@@ -288,23 +288,23 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="name">Tu nombre</label>
-                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Ingresa por al menos 4 caracteres" />
                   <div class="validate"></div>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Tu email</label>
-                  <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Ingresa un email valido" />
                   <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="name">Asunto</label>
-                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Porfavor ingresa al menos 8 caracteres en el asunto" />
                 <div class="validate"></div>
               </div>
               <div class="form-group">
                 <label for="name">Mensaje</label>
-                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Porfavor escribeme algo"></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
@@ -312,7 +312,7 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Tu mensaje ha sido enviado correctamente. Gracias!</div>
               </div>
-              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
+              <div class="text-center"><button type="submit" onclick="sendEmail()" >Enviar Mensaje</button></div>
             </form>
           </div>
 
@@ -320,10 +320,7 @@
 
       </div>
     </section><!-- End Contact Section -->
-    <form method="post"> 
-      <input type="button" value="Send Email" 
-          onclick="sendEmail()" /> 
-    </form>
+    
   </main><!-- End #main -->
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
@@ -349,8 +346,8 @@
         Password: "Ahriestarota123", 
         To: 'sergioba@unisabana.edu.co', 
         From: "sergiobaha1999@gmail.com", 
-        Subject: "aaaaaasd", 
-        Body: "Well that was easy!!", 
+        Subject: email,
+        Body: name + " "+message, 
       }) 
         .then(function (message) { 
           alert("mail sent successfully") 
