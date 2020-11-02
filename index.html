@@ -284,7 +284,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form method="post" role="form" class="php-email-form">
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="name">Tu nombre</label>
@@ -341,17 +341,14 @@
   <script type="text/javascript"> 
     function sendEmail() { 
       Email.send({ 
-        Host: "smtp.gmail.com", 
-        Username: "sergiobaha1999@gmail.com", 
-        Password: "Ahriestarota123", 
-        To: 'sergioba@unisabana.edu.co', 
+        SecureToken : "6050d42b-a4f0-4c89-ac78-42a66b24257a",
+        To: 'sergiobaha1999@gmail.com', 
         From: "sergiobaha1999@gmail.com", 
-        Subject: email,
-        Body: name + " "+message, 
+        Subject: "Contacto por medio de pagina web",
+        Body: "Nombre:" + $("#name").val() + "Correo:" + $("#email").val() + "Asunto:" + $("#subject").val() + "Mensaje:" + $("textarea[name=message]").val(),
       }) 
         .then(function (message) { 
-          alert("mail sent successfully") 
-          console.log(Host)
+          alert("Enviado correctamente") 
         }); 
     } 
   </script>
